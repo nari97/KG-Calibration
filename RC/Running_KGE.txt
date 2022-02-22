@@ -1,0 +1,1024 @@
+sbatch run_ax.sh /home/crrvcs/KGE/
+
+
+
+
+sbatch run_test.sh /home/crrvcs/KGE/ transd 2 valid
+
+
+
+# TODO Explanations: Pending 2 and 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ analogy 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ complex 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ distmult 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ hole 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ rotate 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ simple 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ transd 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ transe 6
+sbatch run_mat.sh /home/crrvcs/OpenKE/ transh 6
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ analogy 6
+Submitted batch job 13661332
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ complex 6
+Submitted batch job 13661333
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ distmult 6
+Submitted batch job 13661334
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ hole 6
+Submitted batch job 13661335
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ rotate 6
+Submitted batch job 13661336
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ simple 6
+Submitted batch job 13661337
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ transd 6
+Submitted batch job 13661338
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ transe 6
+Submitted batch job 13661339
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_mat.sh /home/crrvcs/OpenKE/ transh 6
+Submitted batch job 13661340
+
+
+
+
+zip ../../Mat_6.zip *.model_ratios.tsv *.model.tsv *.model_pbr.txt *.model_negcounts.txt
+zip ../../NegCounts_6.zip *.model_negcounts.txt
+find . -name "*.model.tsv"
+rm *.model_ratios.tsv *.model.tsv *.model_pbr.txt *.model_negcounts.txt
+
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/simple_lr_1.0_nr_30_nbatches_187_wd_5.3592120564820766e-08_m_0.9620657493469078_dim_102_bern_True_trial_index_12.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transd_lr_0.13907663400504022_nr_1_nbatches_169_wd_4.27782209083064e-06_m_0.9622467226327631_dime_211_dimr_107_gamma_3.9562245384376116_bern_False_pnorm_1_norm_False_trial_index_12.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transh_lr_0.10338172824924742_nr_27_nbatches_196_wd_1e-10_m_0.8937887331119312_dim_250_gamma_5.393806377041241_bern_False_pnorm_1_norm_False_trial_index_12.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/analogy_lr_1.0_nr_34_nbatches_109_wd_2.3425832592364704e-07_m_0.8773665140613705_dim_250_bern_False_trial_index_7.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transe_lr_0.42195837305644135_nr_14_nbatches_49_wd_5.086621111806049e-10_m_0.6121041565591959_dim_207_gamma_3.822375243650122_bern_False_pnorm_1_norm_False_trial_index_20.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/complex_lr_0.8715948847454111_nr_3_nbatches_144_wd_1.0052479482233203e-09_m_0.7590237492038663_dim_250_bern_False_trial_index_12.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/distmult_lr_0.8123602016893806_nr_48_nbatches_183_wd_3.0205997205313218e-09_m_0.5794547524907959_dim_142_bern_False_trial_index_12.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transh_lr_0.05325151936102625_nr_37_nbatches_152_wd_3.3572535690066043e-10_m_0.9384285864517484_dim_250_gamma_3.7230690749041147_bern_False_pnorm_1_norm_False_trial_index_13.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transd_lr_0.07649153933757241_nr_5_nbatches_144_wd_2.3888371897168764e-05_m_0.8815375833595103_dime_205_dimr_99_gamma_5.965253920165842_bern_False_pnorm_1_norm_False_trial_index_21.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/hole_lr_0.3912665798006228_nr_33_nbatches_211_wd_1.1729462590516647e-10_m_0.8781929798424244_dim_179_bern_True_trial_index_0.model.tsv 32
+sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/rotate_lr_0.6660215961632948_nr_45_nbatches_249_wd_4.284158067832573e-08_m_0.7731450576549254_dim_90_bern_False_trial_index_10.model.tsv 32
+
+
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/simple_lr_1.0_nr_30_nbatches_187_wd_5.3592120564820766e-08_m_0.9620657493469078_dim_102_bern_True_trial_index_12.model.tsv 32
+Submitted batch job 13660741
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transd_lr_0.13907663400504022_nr_1_nbatches_169_wd_4.27782209083064e-06_m_0.9622467226327631_dime_211_dimr_107_gamma_3.9562245384376116_bern_False_pnorm_1_norm_False_trial_index_12.model.tsv 32
+Submitted batch job 13660742
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transh_lr_0.10338172824924742_nr_27_nbatches_196_wd_1e-10_m_0.8937887331119312_dim_250_gamma_5.393806377041241_bern_False_pnorm_1_norm_False_trial_index_12.model.tsv 32
+Submitted batch job 13660743
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/analogy_lr_1.0_nr_34_nbatches_109_wd_2.3425832592364704e-07_m_0.8773665140613705_dim_250_bern_False_trial_index_7.model.tsv 32
+Submitted batch job 13660744
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transe_lr_0.42195837305644135_nr_14_nbatches_49_wd_5.086621111806049e-10_m_0.6121041565591959_dim_207_gamma_3.822375243650122_bern_False_pnorm_1_norm_False_trial_index_20.model.tsv 32
+Submitted batch job 13660745
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/complex_lr_0.8715948847454111_nr_3_nbatches_144_wd_1.0052479482233203e-09_m_0.7590237492038663_dim_250_bern_False_trial_index_12.model.tsv 32
+Submitted batch job 13660746
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transh_lr_0.05325151936102625_nr_37_nbatches_152_wd_3.3572535690066043e-10_m_0.9384285864517484_dim_250_gamma_3.7230690749041147_bern_False_pnorm_1_norm_False_trial_index_13.model.tsv 32
+Submitted batch job 13660748
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/transd_lr_0.07649153933757241_nr_5_nbatches_144_wd_2.3888371897168764e-05_m_0.8815375833595103_dime_205_dimr_99_gamma_5.965253920165842_bern_False_pnorm_1_norm_False_trial_index_21.model.tsv 32
+Submitted batch job 13660749
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=32 --mem=40000 run_amie.sh /home/crrvcs/AMIE/Data/1/hole_lr_0.3912665798006228_nr_33_nbatches_211_wd_1.1729462590516647e-10_m_0.8781929798424244_dim_179_bern_True_trial_index_0.model.tsv 32
+Submitted batch job 13660750
+
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 10
+Submitted batch job 13872738
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 5
+Submitted batch job 13872739
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 17
+Submitted batch job 13872741
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 23
+Submitted batch job 13872742
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 26
+Submitted batch job 13872743
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 52
+Submitted batch job 13872744
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 80
+Submitted batch job 13872745
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 98
+Submitted batch job 13872746
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 12
+Submitted batch job 13872747
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 35
+Submitted batch job 13872748
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 79
+Submitted batch job 13872749
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 114
+Submitted batch job 13872750
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 171
+Submitted batch job 13872751
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 9
+Submitted batch job 13872752
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 28
+Submitted batch job 13872753
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 31
+Submitted batch job 13872754
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 138
+Submitted batch job 13872755
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 147
+Submitted batch job 13872756
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 210
+Submitted batch job 13872757
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 11
+Submitted batch job 13872758
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 61
+Submitted batch job 13872759
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 32
+Submitted batch job 13872760
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 38
+Submitted batch job 13872761
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 196
+Submitted batch job 13872762
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 227
+Submitted batch job 13872763
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 279
+Submitted batch job 13872764
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 13
+Submitted batch job 13872765
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 53
+Submitted batch job 13872766
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 22
+Submitted batch job 13872767
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 30
+Submitted batch job 13872768
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 24
+Submitted batch job 13872769
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 270
+Submitted batch job 13872770
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 20
+Submitted batch job 13872771
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 192
+Submitted batch job 13872772
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 54
+Submitted batch job 13872773
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 72
+Submitted batch job 13872774
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 16
+Submitted batch job 13872775
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 7
+Submitted batch job 13872776
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 199
+Submitted batch job 13872777
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 203
+Submitted batch job 13872778
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 137
+Submitted batch job 13872779
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 50
+Submitted batch job 13872780
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 110
+Submitted batch job 13872781
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 202
+Submitted batch job 13872782
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 255
+Submitted batch job 13872783
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 43
+Submitted batch job 13872784
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 27
+Submitted batch job 13872785
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 77
+Submitted batch job 13872786
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 165
+Submitted batch job 13872787
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 324
+Submitted batch job 13872788
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 37
+Submitted batch job 13872789
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 63
+Submitted batch job 13872790
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 157
+Submitted batch job 13872791
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 164
+Submitted batch job 13872792
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 49
+Submitted batch job 13872793
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 155
+Submitted batch job 13872794
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 184
+Submitted batch job 13872795
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 390
+Submitted batch job 13872796
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 69
+Submitted batch job 13872797
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 269
+Submitted batch job 13872798
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 322
+Submitted batch job 13872799
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 128
+Submitted batch job 13872800
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 205
+Submitted batch job 13872801
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 3
+Submitted batch job 13872802
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 94
+Submitted batch job 13872803
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 181
+Submitted batch job 13872804
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 328
+Submitted batch job 13872805
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 524
+Submitted batch job 13872806
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 40
+Submitted batch job 13872807
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 84
+Submitted batch job 13872808
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 233
+Submitted batch job 13872809
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 389
+Submitted batch job 13872810
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 75
+Submitted batch job 13872811
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 91
+Submitted batch job 13872812
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 101
+Submitted batch job 13872813
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 282
+Submitted batch job 13872814
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 146
+Submitted batch job 13872815
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 212
+Submitted batch job 13872816
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 209
+Submitted batch job 13872817
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 224
+Submitted batch job 13872818
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 19
+Submitted batch job 13872819
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 25
+Submitted batch job 13872820
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 105
+Submitted batch job 13872821
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 156
+Submitted batch job 13872822
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 21
+Submitted batch job 13872823
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 64
+Submitted batch job 13872824
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 33
+Submitted batch job 13872825
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 42
+Submitted batch job 13872826
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 267
+Submitted batch job 13872827
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 186
+Submitted batch job 13872828
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 217
+Submitted batch job 13872829
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 242
+Submitted batch job 13872830
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 71
+Submitted batch job 13872831
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 129
+Submitted batch job 13872832
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 411
+Submitted batch job 13872833
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 2
+Submitted batch job 13872834
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 46
+Submitted batch job 13872835
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 170
+Submitted batch job 13872836
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 140
+Submitted batch job 13872837
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 86
+Submitted batch job 13872838
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 153
+Submitted batch job 13872839
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 97
+Submitted batch job 13872840
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 168
+Submitted batch job 13872841
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 60
+Submitted batch job 13872842
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 8
+Submitted batch job 13872843
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 250
+Submitted batch job 13872844
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 99
+Submitted batch job 13872845
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 119
+Submitted batch job 13872846
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 123
+Submitted batch job 13872847
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 258
+Submitted batch job 13872848
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 88
+Submitted batch job 13872849
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 263
+Submitted batch job 13872850
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 296
+Submitted batch job 13872851
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 177
+Submitted batch job 13872852
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 340
+Submitted batch job 13872853
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 121
+Submitted batch job 13872854
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 246
+Submitted batch job 13872855
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 4
+Submitted batch job 13872856
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 207
+Submitted batch job 13872857
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 261
+Submitted batch job 13872858
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 253
+Submitted batch job 13872859
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 310
+Submitted batch job 13872860
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 225
+Submitted batch job 13872861
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 326
+Submitted batch job 13872862
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 410
+Submitted batch job 13872863
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 134
+Submitted batch job 13872864
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 48
+Submitted batch job 13872865
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 240
+Submitted batch job 13872866
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 241
+Submitted batch job 13872867
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 67
+Submitted batch job 13872868
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 55
+Submitted batch job 13872869
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 148
+Submitted batch job 13872870
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 169
+Submitted batch job 13872871
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 47
+Submitted batch job 13872872
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 18
+Submitted batch job 13872873
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 144
+Submitted batch job 13872874
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 344
+Submitted batch job 13872875
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 349
+Submitted batch job 13872876
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 36
+Submitted batch job 13872877
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 160
+Submitted batch job 13872878
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 73
+Submitted batch job 13872879
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 41
+Submitted batch job 13872880
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 78
+Submitted batch job 13872881
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 277
+Submitted batch job 13872882
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 294
+Submitted batch job 13872883
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 154
+Submitted batch job 13872884
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 176
+Submitted batch job 13872885
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 200
+Submitted batch job 13872886
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 167
+Submitted batch job 13872887
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 356
+Submitted batch job 13872888
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 1
+Submitted batch job 13872889
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 276
+Submitted batch job 13872890
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 226
+Submitted batch job 13872891
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 221
+Submitted batch job 13872892
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 125
+Submitted batch job 13872893
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 113
+Submitted batch job 13872894
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 65
+Submitted batch job 13872895
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 44
+Submitted batch job 13872896
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 74
+Submitted batch job 13872897
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 382
+Submitted batch job 13872898
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 39
+Submitted batch job 13872899
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 132
+Submitted batch job 13872900
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 92
+Submitted batch job 13872901
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 470
+Submitted batch job 13872902
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 142
+Submitted batch job 13872903
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 191
+Submitted batch job 13872904
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 289
+Submitted batch job 13872905
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 566
+Submitted batch job 13872906
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 438
+Submitted batch job 13872907
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 103
+Submitted batch job 13872908
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 95
+Submitted batch job 13872909
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 102
+Submitted batch job 13872910
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 245
+Submitted batch job 13872911
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 342
+Submitted batch job 13872912
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 82
+Submitted batch job 13872913
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 278
+Submitted batch job 13872914
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 141
+Submitted batch job 13872915
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 362
+Submitted batch job 13872916
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 208
+Submitted batch job 13872917
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 418
+Submitted batch job 13872918
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 257
+Submitted batch job 13872919
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 348
+Submitted batch job 13872920
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 442
+Submitted batch job 13872921
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 317
+Submitted batch job 13872922
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 548
+Submitted batch job 13872923
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 173
+Submitted batch job 13872924
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 298
+Submitted batch job 13872925
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 275
+Submitted batch job 13872926
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 286
+Submitted batch job 13872927
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 329
+Submitted batch job 13872928
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 478
+Submitted batch job 13872929
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 545
+Submitted batch job 13872930
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 313
+Submitted batch job 13872931
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 259
+Submitted batch job 13872932
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 109
+Submitted batch job 13872933
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 57
+Submitted batch job 13872934
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 395
+Submitted batch job 13872935
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 520
+Submitted batch job 13872936
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 172
+Submitted batch job 13872937
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 378
+Submitted batch job 13872938
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 56
+Submitted batch job 13872939
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 149
+Submitted batch job 13872940
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 444
+Submitted batch job 13872941
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 211
+Submitted batch job 13872942
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 236
+Submitted batch job 13872943
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 214
+Submitted batch job 13872944
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 568
+Submitted batch job 13872945
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 446
+Submitted batch job 13872946
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 350
+Submitted batch job 13872947
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 384
+Submitted batch job 13872948
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 315
+Submitted batch job 13872949
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 283
+Submitted batch job 13872950
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 89
+Submitted batch job 13872951
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 295
+Submitted batch job 13872952
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 297
+Submitted batch job 13872953
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 190
+Submitted batch job 13872954
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 152
+Submitted batch job 13872955
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 107
+Submitted batch job 13872956
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 81
+Submitted batch job 13872957
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 637
+Submitted batch job 13872958
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 422
+Submitted batch job 13872959
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 62
+Submitted batch job 13872960
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 106
+Submitted batch job 13872961
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 301
+Submitted batch job 13872962
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 439
+Submitted batch job 13872963
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 252
+Submitted batch job 13872964
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 305
+Submitted batch job 13872965
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 185
+Submitted batch job 13872966
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 179
+Submitted batch job 13872967
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 355
+Submitted batch job 13872968
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 398
+Submitted batch job 13872969
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 280
+Submitted batch job 13872970
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/distmult.tsv 16 230
+Submitted batch job 13872971
+[crrvcs@sporcsubmit AMIE]$
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 10
+Submitted batch job 13872972
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 5
+Submitted batch job 13872973
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 17
+Submitted batch job 13872974
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 23
+Submitted batch job 13872975
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 26
+Submitted batch job 13872976
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 52
+Submitted batch job 13872977
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 80
+Submitted batch job 13872978
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 98
+Submitted batch job 13872979
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 12
+Submitted batch job 13872980
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 35
+Submitted batch job 13872981
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 79
+Submitted batch job 13872982
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 114
+Submitted batch job 13872983
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 171
+Submitted batch job 13872984
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 9
+Submitted batch job 13872985
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 28
+Submitted batch job 13872986
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 31
+Submitted batch job 13872987
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 138
+Submitted batch job 13872988
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 147
+Submitted batch job 13872989
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 210
+Submitted batch job 13872990
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 11
+Submitted batch job 13872991
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 61
+Submitted batch job 13872992
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 32
+Submitted batch job 13872993
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 38
+Submitted batch job 13872994
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 196
+Submitted batch job 13872995
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 227
+Submitted batch job 13872996
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 279
+Submitted batch job 13872997
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 13
+Submitted batch job 13872998
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 53
+Submitted batch job 13872999
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 22
+Submitted batch job 13873000
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 30
+Submitted batch job 13873001
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 24
+Submitted batch job 13873002
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 270
+
+Submitted batch job 13873003
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 20
+Submitted batch job 13873004
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 192
+Submitted batch job 13873005
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 54
+Submitted batch job 13873006
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 72
+Submitted batch job 13873007
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 16
+Submitted batch job 13873008
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 7
+Submitted batch job 13873009
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 199
+Submitted batch job 13873010
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 203
+Submitted batch job 13873011
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 137
+Submitted batch job 13873012
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 50
+Submitted batch job 13873013
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 110
+Submitted batch job 13873014
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 202
+Submitted batch job 13873015
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 255
+Submitted batch job 13873016
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 43
+Submitted batch job 13873017
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 27
+Submitted batch job 13873018
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 77
+Submitted batch job 13873019
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 165
+Submitted batch job 13873020
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 324
+Submitted batch job 13873021
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 37
+Submitted batch job 13873022
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 63
+Submitted batch job 13873023
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 157
+Submitted batch job 13873024
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 164
+Submitted batch job 13873025
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 49
+Submitted batch job 13873026
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 155
+Submitted batch job 13873027
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 184
+Submitted batch job 13873028
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 390
+Submitted batch job 13873029
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 69
+Submitted batch job 13873030
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 269
+Submitted batch job 13873031
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 322
+Submitted batch job 13873032
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 128
+Submitted batch job 13873033
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 205
+Submitted batch job 13873034
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 3
+Submitted batch job 13873035
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 94
+Submitted batch job 13873036
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 181
+Submitted batch job 13873037
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 328
+Submitted batch job 13873038
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 524
+Submitted batch job 13873039
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 40
+Submitted batch job 13873040
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 84
+Submitted batch job 13873041
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 233
+Submitted batch job 13873042
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 389
+Submitted batch job 13873043
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 75
+Submitted batch job 13873044
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 91
+Submitted batch job 13873045
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 101
+Submitted batch job 13873046
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 282
+Submitted batch job 13873047
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 146
+Submitted batch job 13873048
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 212
+Submitted batch job 13873049
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 209
+Submitted batch job 13873050
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 224
+Submitted batch job 13873051
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 19
+Submitted batch job 13873052
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 25
+Submitted batch job 13873053
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 105
+Submitted batch job 13873054
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 156
+Submitted batch job 13873055
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 21
+Submitted batch job 13873056
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 64
+Submitted batch job 13873057
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 33
+Submitted batch job 13873058
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 42
+Submitted batch job 13873059
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 267
+Submitted batch job 13873060
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 186
+Submitted batch job 13873061
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 217
+Submitted batch job 13873062
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 242
+Submitted batch job 13873063
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 71
+Submitted batch job 13873064
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 129
+Submitted batch job 13873065
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 411
+Submitted batch job 13873066
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 2
+Submitted batch job 13873067
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 46
+Submitted batch job 13873068
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 170
+Submitted batch job 13873069
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 140
+Submitted batch job 13873070
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 86
+Submitted batch job 13873071
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 153
+Submitted batch job 13873072
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 97
+Submitted batch job 13873073
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 168
+Submitted batch job 13873074
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 60
+Submitted batch job 13873075
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 8
+Submitted batch job 13873076
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 250
+Submitted batch job 13873077
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 99
+Submitted batch job 13873078
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 119
+Submitted batch job 13873079
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 123
+Submitted batch job 13873080
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 258
+Submitted batch job 13873081
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 88
+Submitted batch job 13873082
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 263
+Submitted batch job 13873083
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 296
+Submitted batch job 13873084
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 177
+Submitted batch job 13873085
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 340
+Submitted batch job 13873086
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 121
+Submitted batch job 13873087
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 246
+Submitted batch job 13873088
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 4
+Submitted batch job 13873089
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 207
+Submitted batch job 13873090
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 261
+Submitted batch job 13873091
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 253
+Submitted batch job 13873092
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 310
+Submitted batch job 13873093
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 225
+Submitted batch job 13873094
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 326
+Submitted batch job 13873095
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 410
+Submitted batch job 13873096
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 134
+Submitted batch job 13873097
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 48
+Submitted batch job 13873098
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 240
+Submitted batch job 13873099
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 241
+Submitted batch job 13873100
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 67
+Submitted batch job 13873101
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 55
+Submitted batch job 13873102
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 148
+Submitted batch job 13873103
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 169
+Submitted batch job 13873104
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 47
+Submitted batch job 13873105
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 18
+Submitted batch job 13873106
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 144
+Submitted batch job 13873107
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 344
+Submitted batch job 13873108
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 349
+Submitted batch job 13873109
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 36
+Submitted batch job 13873110
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 160
+Submitted batch job 13873111
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 73
+Submitted batch job 13873112
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 41
+Submitted batch job 13873113
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 78
+Submitted batch job 13873114
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 277
+Submitted batch job 13873115
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 294
+Submitted batch job 13873116
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 154
+Submitted batch job 13873117
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 176
+Submitted batch job 13873118
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 200
+Submitted batch job 13873119
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 167
+Submitted batch job 13873120
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 356
+Submitted batch job 13873121
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 1
+Submitted batch job 13873122
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 276
+Submitted batch job 13873123
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 226
+Submitted batch job 13873124
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 221
+Submitted batch job 13873125
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 125
+Submitted batch job 13873126
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 113
+Submitted batch job 13873127
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 65
+Submitted batch job 13873128
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 44
+Submitted batch job 13873129
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 74
+Submitted batch job 13873130
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 382
+Submitted batch job 13873131
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 39
+Submitted batch job 13873132
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 132
+Submitted batch job 13873133
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 92
+Submitted batch job 13873134
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 470
+Submitted batch job 13873135
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 142
+Submitted batch job 13873136
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 191
+Submitted batch job 13873137
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 289
+Submitted batch job 13873138
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 566
+Submitted batch job 13873139
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 438
+Submitted batch job 13873140
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 103
+Submitted batch job 13873141
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 95
+Submitted batch job 13873142
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 102
+Submitted batch job 13873143
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 245
+Submitted batch job 13873144
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 342
+Submitted batch job 13873145
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 82
+Submitted batch job 13873146
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 278
+Submitted batch job 13873147
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 141
+Submitted batch job 13873148
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 362
+Submitted batch job 13873149
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 208
+Submitted batch job 13873150
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 418
+Submitted batch job 13873151
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 257
+Submitted batch job 13873152
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 348
+Submitted batch job 13873153
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 442
+Submitted batch job 13873154
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 317
+Submitted batch job 13873155
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 548
+Submitted batch job 13873156
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 173
+Submitted batch job 13873157
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 298
+Submitted batch job 13873158
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 275
+Submitted batch job 13873159
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 286
+Submitted batch job 13873160
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 329
+Submitted batch job 13873161
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 478
+a/1/roSubmitted batch job 13873162
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 545
+Submitted batch job 13873163
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 313
+Submitted batch job 13873164
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 259
+Submitted batch job 13873165
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 109
+Submitted batch job 13873166
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 57
+Submitted batch job 13873167
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 395
+Submitted batch job 13873168
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 520
+Submitted batch job 13873169
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 172
+Submitted batch job 13873170
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 378
+Submitted batch job 13873171
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 56
+Submitted batch job 13873172
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 149
+Submitted batch job 13873173
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 444
+Submitted batch job 13873174
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 211
+Submitted batch job 13873175
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 236
+Submitted batch job 13873176
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 214
+Submitted batch job 13873177
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 568
+Submitted batch job 13873178
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 446
+Submitted batch job 13873179
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 350
+Submitted batch job 13873180
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 384
+Submitted batch job 13873181
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 315
+Submitted batch job 13873182
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 283
+Submitted batch job 13873183
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 89
+Submitted batch job 13873184
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 295
+Submitted batch job 13873185
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 297
+Submitted batch job 13873186
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 190
+Submitted batch job 13873187
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 152
+Submitted batch job 13873188
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 107
+Submitted batch job 13873189
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 81
+Submitted batch job 13873190
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 637
+Submitted batch job 13873191
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 422
+Submitted batch job 13873192
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 62
+Submitted batch job 13873193
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 106
+Submitted batch job 13873194
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 301
+Submitted batch job 13873195
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 439
+Submitted batch job 13873196
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 252
+Submitted batch job 13873197
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 305
+Submitted batch job 13873198
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 185
+Submitted batch job 13873199
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 179
+Submitted batch job 13873200
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 355
+Submitted batch job 13873201
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 398
+Submitted batch job 13873202
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 280
+Submitted batch job 13873203
+[crrvcs@sporcsubmit AMIE]$ sbatch --cpus-per-task=16 --mem=50000 run_amie_pred.sh /home/crrvcs/AMIE/Data/1/rotate.tsv 16 230
+Submitted batch job 13873204
+[crrvcs@sporcsubmit AMIE]$
+
+
+
+
+
+
+
+# Extract specific file.
+unzip -j "Mat_5.zip" "distmult_lr_0.47676402695781_nr_6_nbatches_121_wd_1.5694895546921012e-10_m_0.5_dim_163_bern_True_trial_index_10.model.tsv" -d "."
+unzip -j "Mat_5.zip" "distmult_lr_0.5181944101485263_nr_6_nbatches_153_wd_1.708452304125733e-09_m_0.5175048410143297_dim_144_bern_True_trial_index_14.model.tsv" -d "."

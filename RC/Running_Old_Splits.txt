@@ -1,0 +1,380 @@
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_ax.sh /home/crrvcs/OpenKE2/
+Submitted batch job 12928891
+
+
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transe 4
+Submitted batch job 12843155
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transh 4
+Submitted batch job 12843156
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-10 run_train.sh /home/crrvcs/OpenKE2/ transd 4
+Submitted batch job 12843157
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ distmult 4
+Submitted batch job 12843158
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ complex 4
+Submitted batch job 12843159
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ hole 4
+Submitted batch job 12843160
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ simple 4
+Submitted batch job 12843161
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ analogy 4
+Submitted batch job 12843162
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ rotate 4
+Submitted batch job 12843163
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transe 5
+Submitted batch job 12843164
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transh 5
+Submitted batch job 12843165
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-10 run_train.sh /home/crrvcs/OpenKE2/ transd 5
+Submitted batch job 12843166
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ distmult 5
+Submitted batch job 12843167
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 12843168
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ hole 5
+Submitted batch job 12843169
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ simple 5
+Submitted batch job 12843170
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ analogy 5
+Submitted batch job 12843171
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ rotate 5
+Submitted batch job 12843172
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transe 6
+Submitted batch job 12843173
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-9 run_train.sh /home/crrvcs/OpenKE2/ transh 6
+Submitted batch job 12843174
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-10 run_train.sh /home/crrvcs/OpenKE2/ transd 6
+Submitted batch job 12843175
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ distmult 6
+Submitted batch job 12843176
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ complex 6
+Submitted batch job 12843177
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ hole 6
+Submitted batch job 12843178
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ simple 6
+Submitted batch job 12843179
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ analogy 6
+Submitted batch job 12843180
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12843181
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transe 4
+Submitted batch job 12844856
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transh 4
+Submitted batch job 12844857
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ distmult 4
+Submitted batch job 12844858
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transe 5
+Submitted batch job 12844859
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ hole 5
+Submitted batch job 12844860
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transe 6
+Submitted batch job 12844861
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transh 6
+Submitted batch job 12844862
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=11-21 run_train.sh /home/crrvcs/OpenKE2/ transd 6
+Submitted batch job 12844863
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ distmult 6
+Submitted batch job 12844864
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ hole 6
+Submitted batch job 12844865
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ simple 6
+Submitted batch job 12844866
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=6,7 run_train.sh /home/crrvcs/OpenKE2/ transd 4
+Submitted batch job 12844970
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=1,3 run_train.sh /home/crrvcs/OpenKE2/ complex 4
+Submitted batch job 12844971
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=3 run_train.sh /home/crrvcs/OpenKE2/ analogy 4
+Submitted batch job 12844972
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=2,6 run_train.sh /home/crrvcs/OpenKE2/ transd 5
+Submitted batch job 12844973
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=2 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 12844974
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=1,2,5 run_train.sh /home/crrvcs/OpenKE2/ analogy 5
+Submitted batch job 12844975
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=1,3,4 run_train.sh /home/crrvcs/OpenKE2/ rotate 5
+Submitted batch job 12844976
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=2,5 run_train.sh /home/crrvcs/OpenKE2/ complex 6
+Submitted batch job 12844977
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=2,4 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12845241
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=3 --mem=50000 run_train.sh /home/crrvcs/OpenKE2/ distmult 5
+Submitted batch job 12850064
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=6 --mem=50000 run_train.sh /home/crrvcs/OpenKE2/ simple 5
+Submitted batch job 12850065
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=8 --mem=50000 run_train.sh /home/crrvcs/OpenKE2/ hole 6
+Submitted batch job 12850066
+
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=11-21 run_train.sh /home/crrvcs/OpenKE2/ transd 4
+Submitted batch job 12850216
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ complex 4
+Submitted batch job 12850217
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ hole 4
+Submitted batch job 12850218
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ simple 4
+Submitted batch job 12850219
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ analogy 4
+Submitted batch job 12850220
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ rotate 4
+Submitted batch job 12850221
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10-19 run_train.sh /home/crrvcs/OpenKE2/ transh 5
+Submitted batch job 12850222
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=11-21 run_train.sh /home/crrvcs/OpenKE2/ transd 5
+Submitted batch job 12850223
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 12850224
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ analogy 5
+Submitted batch job 12850225
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ rotate 5
+Submitted batch job 12850226
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ complex 6
+Submitted batch job 12850227
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ analogy 6
+Submitted batch job 12850228
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=9,13 --mem=30000 run_train.sh /home/crrvcs/OpenKE2/ simple 4
+Submitted batch job 12850439
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=9,10 --mem=30000 run_train.sh /home/crrvcs/OpenKE2/ rotate 4
+Submitted batch job 12850440
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=13 --mem=50000 run_train.sh /home/crrvcs/OpenKE2/ simple 4
+Submitted batch job 12850474
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=11,12,13 run_train.sh /home/crrvcs/OpenKE2/ transd 6
+Submitted batch job 12852883
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=4 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12852884
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ distmult 5
+Submitted batch job 12852888
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ simple 5
+Submitted batch job 12852889
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=11 run_train.sh /home/crrvcs/OpenKE2/ hole 4
+Submitted batch job 12868920
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=13 run_train.sh /home/crrvcs/OpenKE2/ rotate 4
+Submitted batch job 12868921
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10 run_train.sh /home/crrvcs/OpenKE2/ transh 5
+Submitted batch job 12868922
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=12,19 run_train.sh /home/crrvcs/OpenKE2/ transd 5
+Submitted batch job 12868923
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=8,9,10,11,12,13 run_train.sh /home/crrvcs/OpenKE2/ rotate 5
+Submitted batch job 12868924
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 12894531
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=4 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12895482
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=8,11 run_train.sh /home/crrvcs/OpenKE2/ simple 5
+Submitted batch job 12895483
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12931914
+
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=8,10,11 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12943349
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=0-6 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 12959381
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=10 run_train.sh /home/crrvcs/OpenKE2/ rotate 6
+Submitted batch job 12991512
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=2,6 run_train.sh /home/crrvcs/OpenKE2/ complex 5
+Submitted batch job 13012729
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --array=7-13 run_train.sh /home/crrvcs/OpenKE/ complex 5
+Submitted batch job 13013579
+
+
+
+sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 4 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 4 test
+
+sbatch run_test.sh /home/crrvcs/OpenKE/ analogy 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ complex 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ distmult 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ hole 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ rotate 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ simple 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ transd 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ transe 5 test
+sbatch run_test.sh /home/crrvcs/OpenKE/ transh 5 test
+
+sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 6 test
+sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 6 test
+
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 4 valid
+Submitted batch job 12932064
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 4 valid
+Submitted batch job 12932065
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 4 valid
+Submitted batch job 12932066
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 4 valid
+Submitted batch job 12932067
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 4 valid
+Submitted batch job 12932068
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 4 valid
+Submitted batch job 12932069
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 4 valid
+Submitted batch job 12932070
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 4 valid
+Submitted batch job 12932071
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 4 valid
+Submitted batch job 12932072
+[crrvcs@sporcsubmit OpenKE2]$
+[crrvcs@sporcsubmit OpenKE2]$
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 6 valid
+Submitted batch job 12932073
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 6 valid
+Submitted batch job 12932074
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 6 valid
+Submitted batch job 12932075
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 6 valid
+Submitted batch job 12932076
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 6 valid
+Submitted batch job 12932078
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 6 valid
+Submitted batch job 12932079
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 6 valid
+Submitted batch job 12932080
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 6 valid
+Submitted batch job 12932081
+[crrvcs@sporcsubmit OpenKE2]$
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 5 valid
+Submitted batch job 12938583
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 5 valid
+Submitted batch job 12938585
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 5 valid
+Submitted batch job 12938586
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 5 valid
+Submitted batch job 12938587
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 5 valid
+Submitted batch job 12938588
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 5 valid
+Submitted batch job 12938589
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 5 valid
+Submitted batch job 12938590
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 5 valid
+Submitted batch job 12938591
+[crrvcs@sporcsubmit OpenKE2]$
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ complex 6 test
+Submitted batch job 12943307
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ transd 6 test
+Submitted batch job 12943308
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ transh 6 test
+Submitted batch job 12943309
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ analogy 6 test
+Submitted batch job 12943359
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ distmult 6 test
+Submitted batch job 12943360
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ hole 6 test
+Submitted batch job 12943361
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ simple 6 test
+Submitted batch job 12943362
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=30000 run_test.sh /home/crrvcs/OpenKE2/ transe 6 test
+Submitted batch job 12943363
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ analogy 4 test
+Submitted batch job 12959174
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ distmult 4 test
+Submitted batch job 12959175
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ hole 4 test
+Submitted batch job 12959176
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ simple 4 test
+Submitted batch job 12959177
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ complex 4 test
+Submitted batch job 12959178
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ transd 4 test
+Submitted batch job 12959179
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ transe 4 test
+Submitted batch job 12959180
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=75000 run_test.sh /home/crrvcs/OpenKE2/ transh 4 test
+Submitted batch job 12959181
+
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ analogy 5 test
+Submitted batch job 12959493
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ distmult 5 test
+Submitted batch job 12959494
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ hole 5 test
+Submitted batch job 12959495
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transd 5 test
+Submitted batch job 12959496
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transe 5 test
+Submitted batch job 12959497
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ transh 5 test
+Submitted batch job 12959498
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ simple 5 test
+Submitted batch job 12959500
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 5 test
+Submitted batch job 12960547
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=50000 run_test.sh /home/crrvcs/OpenKE2/ rotate 4 test
+Submitted batch job 12991511
+
+
+
+Missing!
+sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 5 test
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch --mem=50000 run_test.sh /home/crrvcs/OpenKE2/ amie 4 test
+Submitted batch job 13012726
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ amie 5 test
+Submitted batch job 13012727
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ amie 6 test
+Submitted batch job 13011895
+
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 6 valid
+Submitted batch job 13012742
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ rotate 6 test
+Submitted batch job 13014090
+
+
+[crrvcs@sporcsubmit OpenKE2]$ sbatch run_test.sh /home/crrvcs/OpenKE2/ complex 5 valid
+Submitted batch job 13019666

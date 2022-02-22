@@ -1,0 +1,440 @@
+# Compute min-max and other stuff first.
+sbatch --array=0-62 run_mm.sh /home/crrvcs/OpenKE/ final_calib.db
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-62 run_mm.sh /home/crrvcs/OpenKE/ final_calib.db
+Submitted batch job 13895033
+
+
+# Collect updates from logs
+grep -hr "UPDATE" LogsTrain/*.out
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_ax_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_1.txt
+Submitted batch job 14181403
+
+sbatch run_ax_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_distmult_3.txt
+
+pending_check
+[crrvcs@login04 OpenKE]$ condor_submit train.submit
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-599 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_distmult.txt
+Submitted batch job 14182686
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0,8,27,28,75,87,88,95,96,112,136,165,279,286,299,300,330,340,356,360,376,598,599 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_distmult.txt
+Submitted batch job 14183286
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-143 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_distmult_2.txt
+Submitted batch job 14323031
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=37 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_distmult_2.txt
+Submitted batch job 14323175
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-4416 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_1.txt
+Submitted batch job 14323208
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=171-1000 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_1.txt
+Submitted batch job 14327625
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=333-1000 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_1.txt
+Submitted batch job 14328455
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=333-1000 run_calib.sh /home/crrvcs/OpenKE/ finalw_calib.db pending_1.txt
+Submitted batch job 14329123
+
+
+Pending: 333-4416
+
+
+
+
+
+
+Corrupted triples in validation that are present in test
+Dataset: WN18RR
+Corrupted triples that were present in other triples by strategy: {GlobalNaive=438, TCLCWA=1135, LCWA=448}
+Dataset: WN18
+Corrupted triples that were present in other triples by strategy: {TCLCWA=1789, GlobalNaive=200, LCWA=1603}
+Dataset: WN11
+Corrupted triples that were present in other triples by strategy: {TCLCWA=812, GlobalNaive=34, LCWA=986}
+Dataset: NELL-995
+Corrupted triples that were present in other triples by strategy: {TCLCWA=131286, GlobalNaive=4742, LCWA=21038}
+Dataset: FB15K237
+Corrupted triples that were present in other triples by strategy: {TCLCWA=191198, GlobalNaive=573, LCWA=50618}
+Dataset: FB15K
+Corrupted triples that were present in other triples by strategy: {TCLCWA=351980, GlobalNaive=279, LCWA=89324}
+Dataset: FB13
+Corrupted triples that were present in other triples by strategy: {TCLCWA=52969, GlobalNaive=4, LCWA=78745}
+
+# This is when you copy a database and would like to keep min-max info only while resetting the rest.
+/home/crrvcs/ActivePython-3.7/bin/python3 -u ./Code/resetdb.py /home/crrvcs/OpenKE/ calib_3.db
+
+/home/crrvcs/ActivePython-3.7/bin/python3 -u ./Code/runsql.py /home/crrvcs/OpenKE/ calib_4.db
+
+
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ complex calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ distmult calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ simple calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+sbatch --time=48:0:0 --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13678736
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ complex calib_4.db
+Submitted batch job 13679378
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ distmult calib_4.db
+Submitted batch job 13679379
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13679380
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ simple calib_4.db
+Submitted batch job 13679381
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13679382
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13679383
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13679384
+[crrvcs@sporcsubmit OpenKE]$ sbatch --time=48:0:0 --array=0-244 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+Submitted batch job 13679385
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=84,87,95,101,102,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,220,221,222,223,224,225,226,227,228,229,230,231,233,234,235,236,237,238,239,240,241,242,243 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13683028
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=28,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,143,145,151,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209 run_calib.sh /home/crrvcs/OpenKE/ complex calib_4.db
+Submitted batch job 13683029
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=15,29,33,90,98,99,100,111,112,114,121,124,126,133,136,137,178,179,180,181,183,192,193,198,240 run_calib.sh /home/crrvcs/OpenKE/ distmult calib_4.db
+Submitted batch job 13683030
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,100,101,102,103,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13683031
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=28,30,105,106,109,110,111,114,115,116,117,118,119,123,125,126,128,129,130,131,134,137,138,141,152,154,158,159,161,163,166,167,174,188,212,213,214,219,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ simple calib_4.db
+Submitted batch job 13683942
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=65,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13688500
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=1,3,7,8,9,11,12,13,14,15,18,20,25,28,30,32,33,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,84,85,86,88,100,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,141,142,144,147,148,149,150,151,153,154,156,157,158,159,160,162,164,168,169,170,172,174,178,179,181,182,183,186,188,189,192,194,197,198,199,200,201,203,204,206,208,209,210,211,213,214,216,218,220,224,228,230,231,232,235,238,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13698412
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=4,6,9,12,14,15,19,20,21,25,26,28,29,31,32,33,53,62,65,66,67,72,73,74,75,77,86,87,89,92,93,96,97,98,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,151,152,153,155,156,157,158,159,160,161,164,165,167,168,169,170,171,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,204,205,206,207,208,209,212,215,220,221,222,223,224,225,227,229,230,232,233,234,238,239,240 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13699534
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13703226
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=162,203 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13703228
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=191 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13703231
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,220,221,222,223,224,225,226,227,228,229,230,231,233,234,235,236,237,238,239,240,241,242,243 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13704266
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=28,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,143,145,151,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209 run_calib.sh /home/crrvcs/OpenKE/ complex calib_4.db
+Submitted batch job 13704316
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=15,29,33,90,98,99,100,111,112,114,121,124,126,133,136,137,178,179,180,181,183,192,193,198,240 run_calib.sh /home/crrvcs/OpenKE/ distmult calib_4.db
+Submitted batch job 13704320
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,100,101,102,103,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13704323
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=28,30,105,106,109,110,111,114,115,116,117,118,119,123,125,126,128,129,130,131,134,137,138,141,152,154,158,159,161,163,166,167,174,188,212,213,214,219,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ simple calib_4.db
+Submitted batch job 13704325
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=65,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13704327
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=1,3,7,8,9,11,12,13,14,15,18,20,25,28,30,32,33,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,84,85,86,88,100,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,141,142,144,147,148,149,150,151,153,154,156,157,158,159,160,162,164,168,169,170,172,174,178,179,181,182,183,186,188,189,192,194,197,198,199,200,201,203,204,206,208,209,210,211,213,214,216,218,220,224,228,230,231,232,235,238,242,243,244 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13704328
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=4,6,9,12,14,15,19,20,21,25,26,28,29,31,32,33,53,62,65,66,67,72,73,74,75,77,86,87,89,92,93,96,97,98,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,151,152,153,155,156,157,158,159,160,161,164,165,167,168,169,170,171,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,204,205,206,207,208,209,212,215,220,221,222,223,224,225,227,229,230,232,233,234,238,239,240 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13704329
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13704330
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=162,203 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13704331
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=191 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13704332
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232 --time=48:0:0 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+Submitted batch job 13706049
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=154 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13706050
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13706491
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=118,176,186,204,209 run_calib.sh /home/crrvcs/OpenKE/ complex calib_4.db
+Submitted batch job 13706546
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,213,214,215,216,217,218,219,222,223,225,226,227,228,229,231,232,233,234,236,237,238,239,241,243,244 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13706551
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=84,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,159,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,236,239 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13706609
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13706707
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=136,138,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,204,205,206,207,208,209 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13706855
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=233,234,235,236,237,238,239,240,241,242,243,244 --time=48:0:0 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+Submitted batch job 13707062
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=3,15,39,40 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13707063
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=64 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13707064
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=222 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13707065
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=147 run_calib.sh /home/crrvcs/OpenKE/ analogy calib_4.db
+Submitted batch job 13707362
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=203 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13707363
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=105,106,110,114,117,121,127,129,131,133,135,136 run_calib.sh /home/crrvcs/OpenKE/ hole calib_4.db
+Submitted batch job 13707364
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=134,138,186,190,192,193,196,199,200 run_calib.sh /home/crrvcs/OpenKE/ transd calib_4.db
+Submitted batch job 13707365
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=106,110,117,121,129,135 run_calib.sh /home/crrvcs/OpenKE/ transe calib_4.db
+Submitted batch job 13707366
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=175,176,179,180,186,189,191,192,193,194,195,196,197,198,199,200,201,202,204,205 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13820273
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=203 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13820274
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,41,42,44,45,46,47,49,52,53,54,55,56,57,60,63,65,68,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244 --time=48:0:0 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+Submitted batch job 13822326
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=183,184,185,207,208 run_calib.sh /home/crrvcs/OpenKE/ transh calib_4.db
+Submitted batch job 13822327
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6124 run_calib.sh /home/crrvcs/OpenKE/ rotate calib_4.db
+Submitted batch job 13825906
+
+
+
+# TODO Once everything works, replace all new code in Gitlab and upload.
+
+15691022 -> all pending
+
+
+# TODO Testing!
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ analogy 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ complex 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ distmult 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ hole 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ simple 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transd 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transe 6 calib_4.db
+
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ transh 6 calib_4.db
+
+# TODO Pending!
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 0 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 1 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 2 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 3 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 4 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 5 calib_4.db
+sbatch --array=0-1749 run_test_calib.sh /home/crrvcs/OpenKE/ rotate 6 calib_4.db
+
+
+
+
+
+
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ analogy calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ complex calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ distmult calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ hole calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ simple calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transd calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transe calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transh calib_3.db
+sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ rotate calib_3.db
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ analogy calib_3.db
+Submitted batch job 13621014
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ complex calib_3.db
+Submitted batch job 13621015
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ distmult calib_3.db
+Submitted batch job 13621016
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ hole calib_3.db
+Submitted batch job 13621017
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ simple calib_3.db
+Submitted batch job 13621018
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transd calib_3.db
+Submitted batch job 13621019
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transe calib_3.db
+Submitted batch job 13621020
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ transh calib_3.db
+Submitted batch job 13621021
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-27 run_test_calibr.sh /home/crrvcs/OpenKE/ rotate calib_3.db
+Submitted batch job 13621022
+
+
+
+
+sbatch run_test.sh /home/crrvcs/OpenKE/ analogy 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ complex 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ distmult 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ hole 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ rotate 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ simple 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ transd 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ transe 0 test LCWA
+sbatch run_test.sh /home/crrvcs/OpenKE/ transh 0 test LCWA
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ analogy 0 test LCWA
+Submitted batch job 13551095
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ complex 0 test LCWA
+Submitted batch job 13551096
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ distmult 0 test LCWA
+Submitted batch job 13551097
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ hole 0 test LCWA
+Submitted batch job 13551098
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ rotate 0 test LCWA
+Submitted batch job 13551099
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ simple 0 test LCWA
+Submitted batch job 13551100
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ transd 0 test LCWA
+Submitted batch job 13551101
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ transe 0 test LCWA
+Submitted batch job 13551102
+[crrvcs@sporcsubmit OpenKE]$ sbatch run_test.sh /home/crrvcs/OpenKE/ transh 0 test LCWA
+Submitted batch job 13551103
+
+
+
+
+
+
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ analogy
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ complex
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ distmult
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ hole
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ rotate
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ simple
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transd
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transe
+sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transh
+
+
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ analogy
+Submitted batch job 13568519
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ complex
+Submitted batch job 13568520
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ distmult
+Submitted batch job 13568521
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ hole
+Submitted batch job 13568522
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ rotate
+Submitted batch job 13568523
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ simple
+Submitted batch job 13568524
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transd
+Submitted batch job 13568525
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transe
+Submitted batch job 13568526
+[crrvcs@sporcsubmit OpenKE]$ sbatch --array=0-6 run_ranks.sh /home/crrvcs/OpenKE/ transh
+Submitted batch job 13568527
+
+
+
+
+
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 0 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 1 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 2 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 3 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 4 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 5 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ analogy 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ complex 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ distmult 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ hole 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ simple 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transd 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transe 6 test TCLCWA
+sbatch  run_test.sh /home/crrvcs/OpenKE/ transh 6 test TCLCWA
+
+
